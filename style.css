@@ -57,9 +57,41 @@ body{
     color: white;
     padding: 10px;
     flex-wrap: wrap;
+    border: solid #A435F0 1px;
+}
+.categories p:hover{
+    transition: 0.5s;
+    color: black;
+    border: solid #A435F0 1px;
+    background-color: transparent;
+    cursor: pointer;
 }
 .sale-image img{
     width: 100%;
+    position: relative;
+}
+.sale-image__offer{
+    width: 35%;
+    border: solid black 2px;
+    background-color: white;
+    padding: 2%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    animation-name: zoom;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+    transform:scale(0) ;
+    opacity: 0;
+    }
+    100%{
+        transform:scale(1) ;
+        opacity: 1;
+    }
 }
 .recomended,.popular{
     padding: 10px;
